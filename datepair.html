@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<HTMl>
+<hEad>
+    <MEta NaMe="AUTHOR" CONTENT="Your Name">
+    <tItle>PROGRESSTALK.COM DATEPAIR WEBSPEED EXAMPLE</tiTle>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://jonthornton.github.io/jquery-timepicker/jquery.timepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://jonthornton.github.io/jquery-timepicker/jquery.timepicker.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.standalone.css" />
+
+    <script src="/lib/pikaday.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/pikaday.css" />
+
+    <script src="/lib/jquery.ptTimeSelect.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/jquery.ptTimeSelect.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+
+    <script src="/lib/moment.min.js"></script>
+    <script src="lib/site.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/site.css" />
+
+    <script src="/dist/datepair.js"></script>
+    <script src="/dist/jquery.datepair.js"></script>
+
+</HeaD>
+
+<BODY>
+<h1 ALIGN="center">
+  <Br>Welcome to <FONT cOLOR=#FF0000>ROGRESSTALK.COM DATEPAIR WEBSPEED EXAMPLE</fOnt><bR>
+</h1>
+<HR WiDtH=70%>
+
+<p align=center>
+Host:<stRoNG> `SERVER_NAME`</StroNg><br>
+Browser:<sTrONG> `REMOTE_HOST`</sTroNg><BR>
+Date:<StroNG> `STRING(TODAY,&quot;99-99-9999&quot;)`</StrOnG>
+</P>
+<hR wiDTh="70%">
+
+<P AliGN="center">&nbsp;</p>
+
+<p Align=center>
+<FOnt SiZE="2">For best results why don't you try using<BR></FONT>
+<a hREf="http://www.netscape.com/comprod/mirror/index.html">
+  <FOnT SIZe="2">
+    <IMG SRC="`RootURL`/images/netnow3.gif" ALT="Netscape Navigator"
+      ALIGN="texttop" BORDER="0" HSPACE="5" VSPACE="5" WIDTH="88" HEIGHT="31">
+  </FONt>
+</A>
+<a HREf=http://www.microsoft.com/ie>
+  <fONT size=2>
+    <imG SRC="`RootURL`/images/ie3_anim.gif" ALT="Microsoft Internet Explorer"
+      ALIGN="texttop" BORDER="0" HSPACE="5" VSPACE="5" WIDTH="88" HEIGHT="31">
+  </fOnT>
+</A>
+</p>
+
+
+<p id="basicExample">
+    <input type="text" class="date start" />
+    <input type="text" class="time start" /> to
+    <input type="text" class="date end" />
+    <input type="text" class="time end" />
+</p>
+
+
+
+<script>
+    // initialize input widgets first
+    $('#basicExample .time').timepicker({
+        'showDuration': true,
+        'timeFormat': 'g:ia'
+    });
+
+    $('#basicExample .date').datepicker({
+        'format': 'd/m/yyyy',
+        'autoclose': true
+    });
+
+    // initialize datepair
+    var basicExampleEl = document.getElementById('basicExample');
+    var datepair = new Datepair(basicExampleEl);
+</script>
+
+</BOdy>
+</hTml>
